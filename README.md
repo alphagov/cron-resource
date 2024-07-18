@@ -1,5 +1,7 @@
 # Crontab Resource
 
+***Note this is a GOV.UK Pay maintained fork of [vmware-archive/cron-resource](https://github.com/vmware-archive/cron-resource)***
+
 Implements a resource that reports new versions when the current time
 matches the crontab expression
 
@@ -85,3 +87,7 @@ $ echo '{"source":{"expression":"* * * * *","location":"America/New_York"}}' \
   | go run ./check
 [{"time":"2016-08-19T10:15:27.183011117-04:00"}]
 ```
+
+## Vulnerability Disclosure
+
+GOV.UK Pay aims to stay secure for everyone. If you are a security researcher and have discovered a security vulnerability in this code, we appreciate your help in disclosing it to us in a responsible manner. Please refer to our [vulnerability disclosure policy](https://www.gov.uk/help/report-vulnerability) and our [security.txt](https://vdp.cabinetoffice.gov.uk/.well-known/security.txt) file for details.
