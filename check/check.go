@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"time"
+	_ "time/tzdata"
 
 	"github.com/mbrevoort/cronexpr"
 	"github.com/pivotal-cf-experimental/cron-resource/models"

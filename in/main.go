@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	_ "time/tzdata"
 
 	"github.com/pivotal-cf-experimental/cron-resource/models"
 )
