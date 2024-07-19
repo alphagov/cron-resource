@@ -9,6 +9,7 @@ GOMEGA_VERSION=$(grep "onsi\/gomega" go.mod | awk '{ print $2; }')
 
 go get "github.com/onsi/ginkgo/ginkgo@${GINKGO_VERSION}"
 go get "github.com/onsi/gomega@${GOMEGA_VERSION}"
+go install "github.com/onsi/ginkgo/ginkgo@${GINKGO_VERSION}"
 ginkgo -r .
 
 mkdir -p tmp/build
