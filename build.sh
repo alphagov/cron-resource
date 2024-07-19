@@ -4,8 +4,11 @@ set -ex
 
 go mod download
 
-go get github.com/onsi/ginkgo/ginkgo
-go get github.com/onsi/gomega
+GINKGO_VERSION=$(grep "onsi\/ginkgo" go.mod | awk '{ print $2; }')
+GOMEGA_VERSION=$(grep "onsi\/gomega" go.mod | awk '{ print $2; }')
+
+go get "github.com/onsi/ginkgo/ginkgo@${GINKGO_VERSION}"
+go get "github.com/onsi/gomega@${GOMEGA_VERSION}"
 ginkgo -r .
 
 mkdir -p tmp/build
