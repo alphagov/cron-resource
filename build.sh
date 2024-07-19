@@ -14,5 +14,5 @@ ginkgo -r .
 
 mkdir -p tmp/build
 
-go build -o tmp/build/in in/main.go
-go build -o tmp/build/check check/check.go
+CGO_ENABLED=0 GOOS=linux go build -o tmp/build/in in/main.go
+CGO_ENABLED=0 GOOS=linux go build -o tmp/build/check check/check.go
