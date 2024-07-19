@@ -1,6 +1,6 @@
 module github.com/pivotal-cf-experimental/cron-resource
 
-go 1.15
+go 1.16
 
 require (
 	github.com/onsi/ginkgo v1.12.0
