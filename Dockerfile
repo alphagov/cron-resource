@@ -1,4 +1,4 @@
-FROM golang:1.14 as resource
+FROM golang:1.15 as resource
 COPY . /resource
 WORKDIR /resource
 RUN ./build.sh
