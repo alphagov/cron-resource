@@ -13,9 +13,9 @@ Update your pipeline to include this new declaration of resource types. See the 
 ---
 resource_types:
 - name: cron-resource
-  type: docker-image
+  type: registry-image
   source:
-    repository: cftoolsmiths/cron-resource
+    repository: governmentdigitalservice/pay-cron-resource
 
 resources:
   - name: 10-min-trigger

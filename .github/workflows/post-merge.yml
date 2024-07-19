@@ -1,0 +1,24 @@
+name: Post Merge
+
+on:
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - '.github/**'
+
+permissions:
+  contents: read
+
+concurrency: cron-resource-post-merge
+
+jobs:
+  tests:
+    uses: ./.github/workflows/_run-tests.yml
+
+  tag-release:
+    needs:
+      - tests
+    permissions:
+      contents: write
+    uses: alphagov/pay-ci/.github/workflows/_create-alpha-release-tag.yml@main`
