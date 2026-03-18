@@ -1,4 +1,4 @@
-FROM golang:1.26.1@sha256:318ba178e04ea7655d4e4b1f3f0e81da0da5ff28a2c48681ff0418fb75f5e189 as resource
+FROM golang:1.26.1@sha256:c42e4d75186af6a44eb4159dcfac758ef1c05a7011a0052fe8a8df016d8e8fb9 as resource
 COPY . /resource
 WORKDIR /resource
 RUN ./build.sh
